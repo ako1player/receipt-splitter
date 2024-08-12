@@ -8,6 +8,7 @@ import {
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { ConvexClientProvider } from './ConvexClientProvider'
+import { Header } from './header'
 export default function RootLayout({
   children,
 }: {
@@ -23,12 +24,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
+          <Header />
           {children}
           </ThemeProvider>
         </body>
